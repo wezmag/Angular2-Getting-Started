@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from './product';
 
+
 @Component({
     selector: 'pm-products',
     moduleId: module.id,
