@@ -10,15 +10,14 @@ import 'rxjs/add/operator/do'
 export class ProductService {
     private _productUrl = 'api/products/products.json';
 
-    constructor(private _http: Http) { 
-        
+    constructor(private _http: Http) {
     }
-    
+
     getProduct(): Observable<IProduct[]> {
         return this._http.get(this._productUrl)
             .map((response: Response) => <IProduct[]> response.json())
             .catch(this.handleError)
-            .do(data => console.log('All: ' + JSON.stringify(data)))
+            // .do(data => console.log('All: ' + JSON.stringify(data)))
             ;
     }
 

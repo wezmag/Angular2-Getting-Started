@@ -9,17 +9,16 @@ import { ProductService } from './product.service';
 })
 export class ProductListComponent implements OnInit {
     pageTitle: string = 'Product List';
-    imageWidth:number = 50;
+    imageWidth: number = 50;
     imageMargin: number = 2;
-    showImage:boolean = false;
+    showImage: boolean = false;
     listFilter: string;
     products: IProduct[];
     errorMessage: string;
     constructor(private _productService: ProductService) {
-        
     }
 
-    toggleImage(): void{
+    toggleImage(): void {
         this.showImage = !this.showImage;
     }
 
@@ -31,7 +30,7 @@ export class ProductListComponent implements OnInit {
             );
     }
 
-    onRatingClicked(message:string):void{
+    onRatingClicked(message: string): void {
         this.pageTitle = 'Product List ' + message;
     }
 }
